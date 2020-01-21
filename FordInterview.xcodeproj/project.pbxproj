@@ -15,6 +15,7 @@
 		4D2C289123D6DFB900E88186 /* FordInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C289023D6DFB900E88186 /* FordInterviewTests.swift */; };
 		4D2C289C23D6E0FC00E88186 /* CharacterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C289B23D6E0FC00E88186 /* CharacterResponseModel.swift */; };
 		4D2C28A123D6E14800E88186 /* MarvelURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C28A023D6E14800E88186 /* MarvelURLs.swift */; };
+		4D2C2BB523D6EB3200E88186 /* backup.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C2BB423D6EB3200E88186 /* backup.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		4D2C289223D6DFB900E88186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D2C289B23D6E0FC00E88186 /* CharacterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseModel.swift; sourceTree = "<group>"; };
 		4D2C28A023D6E14800E88186 /* MarvelURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelURLs.swift; sourceTree = "<group>"; };
+		4D2C2BB423D6EB3200E88186 /* backup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = backup.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				4D2C288223D6DFB900E88186 /* Assets.xcassets */,
 				4D2C288423D6DFB900E88186 /* LaunchScreen.storyboard */,
 				4D2C288723D6DFB900E88186 /* Info.plist */,
+				4D2C2BB423D6EB3200E88186 /* backup.json */,
 			);
 			path = FordInterview;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2C288623D6DFB900E88186 /* LaunchScreen.storyboard in Resources */,
+				4D2C2BB523D6EB3200E88186 /* backup.json in Resources */,
 				4D2C288323D6DFB900E88186 /* Assets.xcassets in Resources */,
 				4D2C288123D6DFB800E88186 /* Main.storyboard in Resources */,
 			);
