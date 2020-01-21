@@ -16,6 +16,7 @@
 		4D2C289C23D6E0FC00E88186 /* CharacterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C289B23D6E0FC00E88186 /* CharacterResponseModel.swift */; };
 		4D2C28A123D6E14800E88186 /* MarvelURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C28A023D6E14800E88186 /* MarvelURLs.swift */; };
 		4D2C2BB523D6EB3200E88186 /* backup.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C2BB423D6EB3200E88186 /* backup.json */; };
+		E61B5B427966F88D90E99A92 /* Pods_FordInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C8FE4C07C975A09D626160 /* Pods_FordInterview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08C8FE4C07C975A09D626160 /* Pods_FordInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FordInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B32D0D5B88F57134BE2402E /* Pods-FordInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordInterview.debug.xcconfig"; path = "Target Support Files/Pods-FordInterview/Pods-FordInterview.debug.xcconfig"; sourceTree = "<group>"; };
 		4D2C287623D6DFB800E88186 /* FordInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FordInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2C287923D6DFB800E88186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D2C287D23D6DFB800E88186 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		4D2C289B23D6E0FC00E88186 /* CharacterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseModel.swift; sourceTree = "<group>"; };
 		4D2C28A023D6E14800E88186 /* MarvelURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelURLs.swift; sourceTree = "<group>"; };
 		4D2C2BB423D6EB3200E88186 /* backup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = backup.json; sourceTree = "<group>"; };
+		AD82A3CD42A24AB2705AB2B8 /* Pods-FordInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordInterview.release.xcconfig"; path = "Target Support Files/Pods-FordInterview/Pods-FordInterview.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61B5B427966F88D90E99A92 /* Pods_FordInterview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,8 @@
 				4D2C287823D6DFB800E88186 /* FordInterview */,
 				4D2C288F23D6DFB900E88186 /* FordInterviewTests */,
 				4D2C287723D6DFB800E88186 /* Products */,
+				B8F843968FC25DF472F1B690 /* Pods */,
+				6E8D348B6A52D3DCE2EBE0E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +128,24 @@
 			name = URLs;
 			sourceTree = "<group>";
 		};
+		6E8D348B6A52D3DCE2EBE0E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08C8FE4C07C975A09D626160 /* Pods_FordInterview.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8F843968FC25DF472F1B690 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B32D0D5B88F57134BE2402E /* Pods-FordInterview.debug.xcconfig */,
+				AD82A3CD42A24AB2705AB2B8 /* Pods-FordInterview.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D2C289523D6DFB900E88186 /* Build configuration list for PBXNativeTarget "FordInterview" */;
 			buildPhases = (
+				1B9B61AE7A41B4FDCD1CC829 /* [CP] Check Pods Manifest.lock */,
 				4D2C287223D6DFB800E88186 /* Sources */,
 				4D2C287323D6DFB800E88186 /* Frameworks */,
 				4D2C287423D6DFB800E88186 /* Resources */,
+				4AFC8E118CD8F13529F0A169 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +244,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B9B61AE7A41B4FDCD1CC829 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FordInterview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AFC8E118CD8F13529F0A169 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FordInterview/Pods-FordInterview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FordInterview/Pods-FordInterview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FordInterview/Pods-FordInterview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D2C287223D6DFB800E88186 /* Sources */ = {
@@ -384,6 +453,7 @@
 		};
 		4D2C289623D6DFB900E88186 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B32D0D5B88F57134BE2402E /* Pods-FordInterview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +472,7 @@
 		};
 		4D2C289723D6DFB900E88186 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD82A3CD42A24AB2705AB2B8 /* Pods-FordInterview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
