@@ -57,9 +57,9 @@ extension MarvelCharacter {
         return URL(string: urlString)
     }
     
-    var descriptionURL: URL? {
-        let descriptionURL = urls.filter { $0.type == .detail }
-        guard let urlString = descriptionURL.first?.url else { return nil }
+    var websiteURL: URL? {
+        let websiteURL = urls.filter { $0.type == .detail }
+        guard let urlString = websiteURL.first?.url else { return nil }
         return URL(string: urlString)
     }
 }
