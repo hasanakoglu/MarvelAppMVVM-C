@@ -5,7 +5,6 @@ protocol CharacterRequestProtocol {
 }
 
 class CharacterRequest: CharacterRequestProtocol {
-    // 03/02/2021 - forgot to do catch part and try did not need a ?
     func fetchCharacters(completion: @escaping (Result<[MarvelCharacter], CharacterError>) -> ()) {
         let urlString = API.charactersURL
         guard let url = URL(string: urlString) else { return }

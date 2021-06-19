@@ -32,7 +32,7 @@ class MainViewControllerTests: XCTestCase {
         let characters = MarvelCharacter.characterStub()
         subject.viewModel.listOfCharacters.append(characters)
         subject.viewDidLoad()
-        let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CustomCell
+        let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterImageCell
         XCTAssertNotNil(cell)
         XCTAssertEqual(cell?.nameLabel.text, characters.name)
     }

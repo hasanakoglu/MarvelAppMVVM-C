@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,11 +19,12 @@
 		5A2A542125C08C63001A682F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A542025C08C63001A682F /* Coordinator.swift */; };
 		5A6D395625CB2D950041D169 /* CharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6D395525CB2D950041D169 /* CharacterRequest.swift */; };
 		5AA379FF25C87C7000EDBB5D /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */; };
+		5AEFBD00267E990900B2132F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFBCFF267E990900B2132F /* Date+Extensions.swift */; };
+		5AEFBD0D267EA2C100B2132F /* CharacterDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFBD0C267EA2C100B2132F /* CharacterDetailsTableViewCell.swift */; };
 		5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */; };
-		5AF07B9025C0743800708C8A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B8F25C0743800708C8A /* Extensions.swift */; };
-		5AF07B9725C074A500708C8A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B9625C074A500708C8A /* CustomCell.swift */; };
+		5AF07B9025C0743800708C8A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B8F25C0743800708C8A /* ImageCache.swift */; };
+		5AF07B9725C074A500708C8A /* CharacterImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B9625C074A500708C8A /* CharacterImageCell.swift */; };
 		5AF07B9D25C07AFB00708C8A /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B9C25C07AFB00708C8A /* CharacterDetailsViewController.swift */; };
-		E61B5B427966F88D90E99A92 /* Pods_FordInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C8FE4C07C975A09D626160 /* Pods_FordInterview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,16 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08C8FE4C07C975A09D626160 /* Pods_FordInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FordInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B32D0D5B88F57134BE2402E /* Pods-FordInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordInterview.debug.xcconfig"; path = "Target Support Files/Pods-FordInterview/Pods-FordInterview.debug.xcconfig"; sourceTree = "<group>"; };
-		4D2C287623D6DFB800E88186 /* FordInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FordInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2C287623D6DFB800E88186 /* Marvel App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2C287923D6DFB800E88186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D2C287D23D6DFB800E88186 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4D2C288023D6DFB800E88186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D2C288223D6DFB900E88186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2C288523D6DFB900E88186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D2C288723D6DFB900E88186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D2C288C23D6DFB900E88186 /* FordInterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FordInterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2C288C23D6DFB900E88186 /* Marvel AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2C289023D6DFB900E88186 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		4D2C289223D6DFB900E88186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D2C289B23D6E0FC00E88186 /* CharacterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponseModel.swift; sourceTree = "<group>"; };
@@ -55,11 +54,12 @@
 		5A2A542025C08C63001A682F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5A6D395525CB2D950041D169 /* CharacterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRequest.swift; sourceTree = "<group>"; };
 		5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
+		5AEFBCFF267E990900B2132F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		5AEFBD0C267EA2C100B2132F /* CharacterDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
-		5AF07B8F25C0743800708C8A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		5AF07B9625C074A500708C8A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		5AF07B8F25C0743800708C8A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		5AF07B9625C074A500708C8A /* CharacterImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageCell.swift; sourceTree = "<group>"; };
 		5AF07B9C25C07AFB00708C8A /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
-		AD82A3CD42A24AB2705AB2B8 /* Pods-FordInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordInterview.release.xcconfig"; path = "Target Support Files/Pods-FordInterview/Pods-FordInterview.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61B5B427966F88D90E99A92 /* Pods_FordInterview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,51 +84,47 @@
 			isa = PBXGroup;
 			children = (
 				4D2C287923D6DFB800E88186 /* AppDelegate.swift */,
-				4D2C287823D6DFB800E88186 /* FordInterview */,
-				4D2C288F23D6DFB900E88186 /* FordInterviewTests */,
+				4D2C287823D6DFB800E88186 /* MarvelApp */,
+				4D2C288F23D6DFB900E88186 /* MarvelAppTests */,
 				4D2C287723D6DFB800E88186 /* Products */,
-				B8F843968FC25DF472F1B690 /* Pods */,
-				6E8D348B6A52D3DCE2EBE0E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		4D2C287723D6DFB800E88186 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D2C287623D6DFB800E88186 /* FordInterview.app */,
-				4D2C288C23D6DFB900E88186 /* FordInterviewTests.xctest */,
+				4D2C287623D6DFB800E88186 /* Marvel App.app */,
+				4D2C288C23D6DFB900E88186 /* Marvel AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D2C287823D6DFB800E88186 /* FordInterview */ = {
+		4D2C287823D6DFB800E88186 /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
 				5A2A542025C08C63001A682F /* Coordinator.swift */,
 				4D2C289F23D6E12F00E88186 /* URLs */,
 				4D2C289E23D6E11C00E88186 /* Model */,
-				4D2C287D23D6DFB800E88186 /* MainViewController.swift */,
-				5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */,
-				5AF07B9C25C07AFB00708C8A /* CharacterDetailsViewController.swift */,
-				5AF07B8F25C0743800708C8A /* Extensions.swift */,
+				5AEFBD09267E999600B2132F /* Views */,
 				5AF07B9525C0747700708C8A /* Cells */,
 				4D2C287F23D6DFB800E88186 /* Main.storyboard */,
 				4D2C288223D6DFB900E88186 /* Assets.xcassets */,
 				4D2C288423D6DFB900E88186 /* LaunchScreen.storyboard */,
 				4D2C288723D6DFB900E88186 /* Info.plist */,
 				4D2C2BB423D6EB3200E88186 /* backup.json */,
+				5AEFBCFE267E98EC00B2132F /* Extensions */,
 			);
-			path = FordInterview;
+			path = MarvelApp;
 			sourceTree = "<group>";
 		};
-		4D2C288F23D6DFB900E88186 /* FordInterviewTests */ = {
+		4D2C288F23D6DFB900E88186 /* MarvelAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				4D2C289023D6DFB900E88186 /* MainViewControllerTests.swift */,
 				5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */,
 				4D2C289223D6DFB900E88186 /* Info.plist */,
 			);
-			path = FordInterviewTests;
+			path = MarvelAppTests;
 			sourceTree = "<group>";
 		};
 		4D2C289E23D6E11C00E88186 /* Model */ = {
@@ -137,6 +132,7 @@
 			children = (
 				4D2C289B23D6E0FC00E88186 /* CharacterResponseModel.swift */,
 				5A6D395525CB2D950041D169 /* CharacterRequest.swift */,
+				5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -149,56 +145,56 @@
 			name = URLs;
 			sourceTree = "<group>";
 		};
+		5AEFBCFE267E98EC00B2132F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5AF07B8F25C0743800708C8A /* ImageCache.swift */,
+				5AEFBCFF267E990900B2132F /* Date+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		5AEFBD09267E999600B2132F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AF07B9C25C07AFB00708C8A /* CharacterDetailsViewController.swift */,
+				4D2C287D23D6DFB800E88186 /* MainViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		5AF07B9525C0747700708C8A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				5AF07B9625C074A500708C8A /* CustomCell.swift */,
+				5AF07B9625C074A500708C8A /* CharacterImageCell.swift */,
+				5AEFBD0C267EA2C100B2132F /* CharacterDetailsTableViewCell.swift */,
 			);
 			name = Cells;
-			sourceTree = "<group>";
-		};
-		6E8D348B6A52D3DCE2EBE0E9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				08C8FE4C07C975A09D626160 /* Pods_FordInterview.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B8F843968FC25DF472F1B690 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0B32D0D5B88F57134BE2402E /* Pods-FordInterview.debug.xcconfig */,
-				AD82A3CD42A24AB2705AB2B8 /* Pods-FordInterview.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4D2C287523D6DFB800E88186 /* FordInterview */ = {
+		4D2C287523D6DFB800E88186 /* Marvel App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D2C289523D6DFB900E88186 /* Build configuration list for PBXNativeTarget "FordInterview" */;
+			buildConfigurationList = 4D2C289523D6DFB900E88186 /* Build configuration list for PBXNativeTarget "Marvel App" */;
 			buildPhases = (
-				1B9B61AE7A41B4FDCD1CC829 /* [CP] Check Pods Manifest.lock */,
 				4D2C287223D6DFB800E88186 /* Sources */,
 				4D2C287323D6DFB800E88186 /* Frameworks */,
 				4D2C287423D6DFB800E88186 /* Resources */,
-				4AFC8E118CD8F13529F0A169 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FordInterview;
+			name = "Marvel App";
 			productName = FordInterview;
-			productReference = 4D2C287623D6DFB800E88186 /* FordInterview.app */;
+			productReference = 4D2C287623D6DFB800E88186 /* Marvel App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D2C288B23D6DFB900E88186 /* FordInterviewTests */ = {
+		4D2C288B23D6DFB900E88186 /* Marvel AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D2C289823D6DFB900E88186 /* Build configuration list for PBXNativeTarget "FordInterviewTests" */;
+			buildConfigurationList = 4D2C289823D6DFB900E88186 /* Build configuration list for PBXNativeTarget "Marvel AppTests" */;
 			buildPhases = (
 				4D2C288823D6DFB900E88186 /* Sources */,
 				4D2C288923D6DFB900E88186 /* Frameworks */,
@@ -209,9 +205,9 @@
 			dependencies = (
 				4D2C288E23D6DFB900E88186 /* PBXTargetDependency */,
 			);
-			name = FordInterviewTests;
+			name = "Marvel AppTests";
 			productName = FordInterviewTests;
-			productReference = 4D2C288C23D6DFB900E88186 /* FordInterviewTests.xctest */;
+			productReference = 4D2C288C23D6DFB900E88186 /* Marvel AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +218,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = mgopsill;
+				ORGANIZATIONNAME = hakoglu;
 				TargetAttributes = {
 					4D2C287523D6DFB800E88186 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -233,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D2C287123D6DFB800E88186 /* Build configuration list for PBXProject "FordInterview" */;
+			buildConfigurationList = 4D2C287123D6DFB800E88186 /* Build configuration list for PBXProject "Marvel App" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -246,8 +242,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D2C287523D6DFB800E88186 /* FordInterview */,
-				4D2C288B23D6DFB900E88186 /* FordInterviewTests */,
+				4D2C287523D6DFB800E88186 /* Marvel App */,
+				4D2C288B23D6DFB900E88186 /* Marvel AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,61 +269,21 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1B9B61AE7A41B4FDCD1CC829 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FordInterview-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4AFC8E118CD8F13529F0A169 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FordInterview/Pods-FordInterview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FordInterview/Pods-FordInterview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FordInterview/Pods-FordInterview-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		4D2C287223D6DFB800E88186 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */,
+				5AEFBD00267E990900B2132F /* Date+Extensions.swift in Sources */,
 				4D2C28A123D6E14800E88186 /* MarvelURLs.swift in Sources */,
 				4D2C289C23D6E0FC00E88186 /* CharacterResponseModel.swift in Sources */,
 				4D2C287E23D6DFB800E88186 /* MainViewController.swift in Sources */,
 				4D2C287A23D6DFB800E88186 /* AppDelegate.swift in Sources */,
 				5A6D395625CB2D950041D169 /* CharacterRequest.swift in Sources */,
-				5AF07B9725C074A500708C8A /* CustomCell.swift in Sources */,
-				5AF07B9025C0743800708C8A /* Extensions.swift in Sources */,
+				5AF07B9725C074A500708C8A /* CharacterImageCell.swift in Sources */,
+				5AEFBD0D267EA2C100B2132F /* CharacterDetailsTableViewCell.swift in Sources */,
+				5AF07B9025C0743800708C8A /* ImageCache.swift in Sources */,
 				5AF07B9D25C07AFB00708C8A /* CharacterDetailsViewController.swift in Sources */,
 				5A2A542125C08C63001A682F /* Coordinator.swift in Sources */,
 			);
@@ -347,7 +303,7 @@
 /* Begin PBXTargetDependency section */
 		4D2C288E23D6DFB900E88186 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4D2C287523D6DFB800E88186 /* FordInterview */;
+			target = 4D2C287523D6DFB800E88186 /* Marvel App */;
 			targetProxy = 4D2C288D23D6DFB900E88186 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -488,18 +444,19 @@
 		};
 		4D2C289623D6DFB900E88186 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B32D0D5B88F57134BE2402E /* Pods-FordInterview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EYT7Q6838H;
-				INFOPLIST_FILE = FordInterview/Info.plist;
+				DEVELOPMENT_TEAM = SL8XHPVUK3;
+				INFOPLIST_FILE = "$(SRCROOT)/MarvelApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgopsill.FordInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -507,18 +464,19 @@
 		};
 		4D2C289723D6DFB900E88186 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD82A3CD42A24AB2705AB2B8 /* Pods-FordInterview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EYT7Q6838H;
-				INFOPLIST_FILE = FordInterview/Info.plist;
+				DEVELOPMENT_TEAM = SL8XHPVUK3;
+				INFOPLIST_FILE = "$(SRCROOT)/MarvelApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgopsill.FordInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -542,7 +500,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FordInterview.app/FordInterview";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marvel App.app/Marvel App";
 			};
 			name = Debug;
 		};
@@ -564,14 +522,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FordInterview.app/FordInterview";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marvel App.app/Marvel App";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D2C287123D6DFB800E88186 /* Build configuration list for PBXProject "FordInterview" */ = {
+		4D2C287123D6DFB800E88186 /* Build configuration list for PBXProject "Marvel App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D2C289323D6DFB900E88186 /* Debug */,
@@ -580,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D2C289523D6DFB900E88186 /* Build configuration list for PBXNativeTarget "FordInterview" */ = {
+		4D2C289523D6DFB900E88186 /* Build configuration list for PBXNativeTarget "Marvel App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D2C289623D6DFB900E88186 /* Debug */,
@@ -589,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D2C289823D6DFB900E88186 /* Build configuration list for PBXNativeTarget "FordInterviewTests" */ = {
+		4D2C289823D6DFB900E88186 /* Build configuration list for PBXNativeTarget "Marvel AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D2C289923D6DFB900E88186 /* Debug */,

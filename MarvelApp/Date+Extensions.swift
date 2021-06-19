@@ -1,9 +1,13 @@
-//
-//  Date+Extensions.swift
-//  Marvel App
-//
-//  Created by Hasan Akoglu on 19/06/2021.
-//  Copyright © 2021 hakoglu. All rights reserved.
-//
-
 import Foundation
+
+extension Date {
+    func getDateString(from date: Date) -> String {
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        df.timeStyle = .none
+        df.locale = Locale.current
+        df.dateFormat = ""
+        let newDate = df.string(from: date)
+        return newDate
+    }
+}

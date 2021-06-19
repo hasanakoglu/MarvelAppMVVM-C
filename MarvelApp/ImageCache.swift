@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 let imageCache = NSCache<AnyObject, AnyObject>()
+
 extension UIImageView {
     func loadImageFromUrl(urlString: String)  {
         if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
@@ -20,17 +21,5 @@ extension UIImageView {
                 }
             }
         }.resume()
-    }
-}
-
-extension Date {
-    func getDateString(from date: Date) -> String {
-        let df = DateFormatter()
-        df.dateStyle = .medium
-        df.timeStyle = .none
-        df.locale = Locale.current
-        df.dateFormat = ""
-        let newDate = df.string(from: date)
-        return newDate
     }
 }

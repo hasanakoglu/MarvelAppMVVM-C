@@ -9,7 +9,7 @@ enum CharacterError: Error {
 protocol CharactersViewModelProtocol {
     var listOfCharacters: [MarvelCharacter] { get set }
     var characterImages: [String: UIImage] { get set }
-    func fetchCharacters(completion: @escaping () -> ()) // 03/02/2021 had to change this for testing
+    func fetchCharacters(completion: @escaping () -> ()) 
     func getImage(index: Int, completion: @escaping (UIImage?) -> ())
 }
 
@@ -57,7 +57,6 @@ class CharactersViewModel: CharactersViewModelProtocol {
         }.resume()
     }
     
-    //learn this too - 03/02/2021
 //    fileprivate func tokenRequest() {
 //            if let url: URL = URL(string: "https://fcisqa.ice.ibmcloud.com/v1.0/endpoint/default/token/") {
 //                let jsonDict: [String: Any] = ["grant_type": "password",

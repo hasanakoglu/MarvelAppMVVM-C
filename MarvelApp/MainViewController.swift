@@ -7,6 +7,7 @@ class MainViewController: UIViewController {
         }
     var viewModel: CharactersViewModelProtocol
     var userDefaults = UserDefaults.standard
+    var coordinator: Coordinator?
     
     public init(viewModel: CharactersViewModelProtocol) {
         self.viewModel = viewModel
@@ -22,7 +23,6 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         self.title = "Marvel"
         
-        //did not know this - LOOK AGAIN
         navigationController?.navigationBar.prefersLargeTitles = true
 
         setupTableView()
@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
         addChild(tableViewController)
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
-        tableView.register(CustomCell.self, forCellReuseIdentifier: CustomCell.identifier)
+        tableView.register(CharacterImageCell.self, forCellReuseIdentifier: CharacterImageCell.identifier)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
@@ -56,11 +56,8 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let characters = viewModel.listOfCharacters[indexPath.row]
-        let vc = CharacterDetailsViewController()
-        vc.titleLabel.text = characters.name
-        navigationController?.pushViewController(vc, animated: true)
-        
+        let character = viewModel.listOfCharacters[indexPath.row]
+        coordinator?.didSelect(character: character)
     }
 }
 
@@ -70,9 +67,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as! CustomCell
-        
-        //did not know this - LOOK AGAIN
+        let cell = tableView.dequeueReusableCell(withIdentifier: CharacterImageCell.identifier, for: indexPath) as! CharacterImageCell
         cell.accessoryType = .disclosureIndicator
         
         let characters = viewModel.listOfCharacters[indexPath.row]

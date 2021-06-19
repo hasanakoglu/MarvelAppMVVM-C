@@ -1,23 +1,40 @@
 import UIKit
 
-class CharacterDetailsViewController: UIViewController {
-    let titleLabel: UILabel = UILabel()
-
-    override func viewDidLoad() {
-        view.backgroundColor = .white
-        super.viewDidLoad()
-        setupViews()
-        
-        // Do any additional setup after loading the view.
+class CharacterDetailsViewController: UITableViewController {
+    private let character: MarvelCharacter
+    
+    init(character: MarvelCharacter) {
+        self.character = character
+        super.init(style: .plain)
     }
     
-    func setupViews() {
-        view.addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = .black
-        titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        titleLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        title = character.name
+        tableView.dataSource = self
+        tableView.register(CharacterDetailsTableViewCell.self, forCellReuseIdentifier: CharacterDetailsTableViewCell.reuseIdentifier)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44.0
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+}
+
+extension CharacterDetailsViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailsTableViewCell.reuseIdentifier, for: indexPath) as? CharacterDetailsTableViewCell else { return UITableViewCell() }
+        cell.update(with: character)
+        return cell
     }
 }
