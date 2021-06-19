@@ -1,11 +1,3 @@
-//
-//  MarvelURLs.swift
-//  FordInterview
-//
-//  Created by Mike Gopsill on 21/01/2020.
-//  Copyright © 2020 mgopsill. All rights reserved.
-//
-
 import Foundation
 
 enum API {

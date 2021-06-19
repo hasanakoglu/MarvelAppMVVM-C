@@ -1,11 +1,3 @@
-//
-//  CharacterResponseModel.swift
-//  FordInterview
-//
-//  Created by Mike Gopsill on 21/01/2020.
-//  Copyright © 2020 mgopsill. All rights reserved.
-//
-
 import Foundation
 
 struct CharacterResponseModel: Codable {
@@ -33,6 +25,10 @@ struct Thumbnail: Codable {
     enum CodingKeys: String, CodingKey {
         case path
         case thumbnailExtension = "extension"
+    }
+    
+    var full: String {
+        return path + "." + thumbnailExtension.rawValue
     }
 }
 
