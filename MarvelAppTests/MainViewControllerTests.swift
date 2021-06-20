@@ -1,8 +1,6 @@
 import XCTest
 @testable import Marvel_App
 
-// 03/02/2021 - have a look through this again
-
 class MainViewControllerTests: XCTestCase {
     var subject: MainViewController!
     var fakeViewModel: FakeCharactersViewModel!
@@ -23,7 +21,7 @@ class MainViewControllerTests: XCTestCase {
         XCTAssertNotNil(subject.tableView)
         let delegate = subject.tableView.delegate
         let dataSource = subject.tableView.dataSource
-        //03/02/2021 did not know what === is
+
         XCTAssertTrue(delegate === subject)
         XCTAssertTrue(dataSource === subject)
     }

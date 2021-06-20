@@ -5,10 +5,16 @@ protocol CharacterRequestProtocol {
 }
 
 class CharacterRequest: CharacterRequestProtocol {
+    private let session: URLSession
+    
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
+    }
+    
     func fetchCharacters(completion: @escaping (Result<[MarvelCharacter], CharacterError>) -> ()) {
         let urlString = API.charactersURL
         guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        session.dataTask(with: url) { (data, response, error) in
             guard let jsonData = data else {
                 completion(.failure(.noData))
                 return
@@ -26,3 +32,27 @@ class CharacterRequest: CharacterRequestProtocol {
     }
 }
 
+enum Result<Value, Error> {
+    case success(Value)
+    case failure(Error)
+}
+
+extension Result {
+    var value: Value? {
+        switch self {
+        case .success(let value):
+            return value
+        case .failure:
+            return nil
+        }
+    }
+    
+    var error: Error? {
+        switch self {
+        case .success:
+            return nil
+        case .failure(let error):
+            return error
+        }
+    }
+}

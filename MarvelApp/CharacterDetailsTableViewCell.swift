@@ -4,8 +4,8 @@ class CharacterDetailsTableViewCell: UITableViewCell {
     private let nameLabel: UILabel = UILabel()
     private let characterImageView: UIImageView = UIImageView()
     private let button = UIButton()
-    private let descriptionLabel: UILabel = UILabel()
     private var characterDescriptionURL: URL?
+    let descriptionLabel: UILabel = UILabel()
     
     static let reuseIdentifier = "CharacterDetails"
     
@@ -57,7 +57,7 @@ class CharacterDetailsTableViewCell: UITableViewCell {
     
     func update(with character: MarvelCharacter) {
         nameLabel.text = character.name
-        descriptionLabel.text = character.description == "" ? "No Description Provided" : character.description
+        descriptionLabel.text = character.description == "" ? "No Description" : character.description
         characterDescriptionURL = character.websiteURL
         characterImageView.loadImageFromUrl(urlString: character.thumbnail.full)
         updateConstraints()

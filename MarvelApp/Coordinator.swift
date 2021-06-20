@@ -3,7 +3,7 @@ import UIKit
 
 protocol Coordinator {
     func start()
-    func didSelect(character: MarvelCharacter)
+    func didSelect(character: MarvelCharacter?)
 }
 
 class MainCoordinator: Coordinator {
@@ -20,7 +20,8 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func didSelect(character: MarvelCharacter) {
+    func didSelect(character: MarvelCharacter?) {
+        guard let character = character else { return }
         let detailsVC = CharacterDetailsViewController(character: character)
         navigationController.pushViewController(detailsVC, animated: true)
     }
