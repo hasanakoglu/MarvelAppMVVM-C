@@ -7,7 +7,7 @@ class MainViewController: UIViewController {
         }
     var viewModel: CharactersViewModelProtocol
     var userDefaults = UserDefaults.standard
-    var coordinator: Coordinator?
+    var coordinator: MainViewCoordinator?
     
     public init(viewModel: CharactersViewModelProtocol) {
         self.viewModel = viewModel

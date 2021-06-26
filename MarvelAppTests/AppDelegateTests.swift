@@ -32,10 +32,7 @@ class AppDelegateTests: XCTestCase {
             return
         }
         
-        let navigationController = rootViewController as? UINavigationController
-        XCTAssertNotNil(navigationController)
-        
-        let mainVC = navigationController?.topViewController as? MainViewController
+        let mainVC = rootViewController as? MainTabBarController
         XCTAssertNotNil(mainVC)
     }
 }

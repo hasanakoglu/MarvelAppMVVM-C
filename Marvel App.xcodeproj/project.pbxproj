@@ -28,6 +28,11 @@
 		5A84E957267F723C0034EA80 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A84E955267F723C0034EA80 /* test.png */; };
 		5A84E95B267F78160034EA80 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E95A267F78160034EA80 /* AppDelegateTests.swift */; };
 		5A84E961267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */; };
+		5A9F0BF52687A7C700CF3572 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BF42687A7C700CF3572 /* MainTabBarController.swift */; };
+		5A9F0BF92687A89400CF3572 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BF82687A89400CF3572 /* MainViewCoordinator.swift */; };
+		5A9F0BFF2687A8F300CF3572 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BFE2687A8F300CF3572 /* CoordinatorFactory.swift */; };
+		5A9F0C052687A92600CF3572 /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0C042687A92600CF3572 /* FavouritesCoordinator.swift */; };
+		5A9F0C112687AB9600CF3572 /* MainTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0C0D2687AB9100CF3572 /* MainTabBarControllerTests.swift */; };
 		5AA379FF25C87C7000EDBB5D /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */; };
 		5AEFBD0D267EA2C100B2132F /* CharacterDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFBD0C267EA2C100B2132F /* CharacterDetailsTableViewCell.swift */; };
 		5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */; };
@@ -72,6 +77,11 @@
 		5A84E955267F723C0034EA80 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = "../../../../MARVEL APPs /MarvelMVVM-C-master/MarvelMVVM-CTests/TestData/test.png"; sourceTree = "<group>"; };
 		5A84E95A267F78160034EA80 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		5A9F0BF42687A7C700CF3572 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5A9F0BF82687A89400CF3572 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		5A9F0BFE2687A8F300CF3572 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		5A9F0C042687A92600CF3572 /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
+		5A9F0C0D2687AB9100CF3572 /* MainTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerTests.swift; sourceTree = "<group>"; };
 		5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
 		5AEFBD0C267EA2C100B2132F /* CharacterDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
@@ -120,7 +130,7 @@
 		4D2C287823D6DFB800E88186 /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
-				5A2A542025C08C63001A682F /* Coordinator.swift */,
+				5A9F0C0A2687AA9700CF3572 /* Coordinator */,
 				4D2C289F23D6E12F00E88186 /* URLs */,
 				4D2C289E23D6E11C00E88186 /* Model */,
 				5AEFBD09267E999600B2132F /* Views */,
@@ -140,6 +150,7 @@
 			children = (
 				5A84E953267F72100034EA80 /* Test Data */,
 				4D2C289023D6DFB900E88186 /* MainViewControllerTests.swift */,
+				5A9F0C0D2687AB9100CF3572 /* MainTabBarControllerTests.swift */,
 				5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */,
 				5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */,
 				5A84E92B267F69BD0034EA80 /* CoordinatorTests.swift */,
@@ -187,6 +198,18 @@
 				5A84E955267F723C0034EA80 /* test.png */,
 			);
 			path = "Test Data";
+			sourceTree = "<group>";
+		};
+		5A9F0C0A2687AA9700CF3572 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F0BF42687A7C700CF3572 /* MainTabBarController.swift */,
+				5A2A542025C08C63001A682F /* Coordinator.swift */,
+				5A9F0BFE2687A8F300CF3572 /* CoordinatorFactory.swift */,
+				5A9F0BF82687A89400CF3572 /* MainViewCoordinator.swift */,
+				5A9F0C042687A92600CF3572 /* FavouritesCoordinator.swift */,
+			);
+			name = Coordinator;
 			sourceTree = "<group>";
 		};
 		5AEFBCFE267E98EC00B2132F /* Extensions */ = {
@@ -321,11 +344,15 @@
 			files = (
 				5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */,
 				4D2C28A123D6E14800E88186 /* MarvelURLs.swift in Sources */,
+				5A9F0C052687A92600CF3572 /* FavouritesCoordinator.swift in Sources */,
+				5A9F0BF52687A7C700CF3572 /* MainTabBarController.swift in Sources */,
 				4D2C289C23D6E0FC00E88186 /* CharacterResponseModel.swift in Sources */,
+				5A9F0BF92687A89400CF3572 /* MainViewCoordinator.swift in Sources */,
 				4D2C287E23D6DFB800E88186 /* MainViewController.swift in Sources */,
 				4D2C287A23D6DFB800E88186 /* AppDelegate.swift in Sources */,
 				5A6D395625CB2D950041D169 /* CharacterRequest.swift in Sources */,
 				5AF07B9725C074A500708C8A /* CharacterImageCell.swift in Sources */,
+				5A9F0BFF2687A8F300CF3572 /* CoordinatorFactory.swift in Sources */,
 				5AEFBD0D267EA2C100B2132F /* CharacterDetailsTableViewCell.swift in Sources */,
 				5AF07B9025C0743800708C8A /* ImageCache.swift in Sources */,
 				5AF07B9D25C07AFB00708C8A /* CharacterDetailsViewController.swift in Sources */,
@@ -341,6 +368,7 @@
 				5AA379FF25C87C7000EDBB5D /* CharactersViewModelTests.swift in Sources */,
 				5A84E946267F6D6E0034EA80 /* FakeCharactersViewModel.swift in Sources */,
 				4D2C289123D6DFB900E88186 /* MainViewControllerTests.swift in Sources */,
+				5A9F0C112687AB9600CF3572 /* MainTabBarControllerTests.swift in Sources */,
 				5A84E94E267F6DE20034EA80 /* MockTask.swift in Sources */,
 				5A84E95B267F78160034EA80 /* AppDelegateTests.swift in Sources */,
 				5A84E940267F6D290034EA80 /* MockCharacterRequest.swift in Sources */,

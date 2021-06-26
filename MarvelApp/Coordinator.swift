@@ -6,23 +6,9 @@ protocol Coordinator {
     func didSelect(character: MarvelCharacter?)
 }
 
-class MainCoordinator: Coordinator {
-    var navigationController: UINavigationController
-    
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-    
-    func start() {
-        let viewModel = CharactersViewModel(request: CharacterRequest())
-        let vc = MainViewController(viewModel: viewModel)
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func didSelect(character: MarvelCharacter?) {
-        guard let character = character else { return }
-        let detailsVC = CharacterDetailsViewController(character: character)
-        navigationController.pushViewController(detailsVC, animated: true)
-    }
+protocol Router: AnyObject {
+    func pushViewController(_ viewController: UIViewController, animated: Bool)
+    func present(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
 }
+
+extension UINavigationController: Router { }

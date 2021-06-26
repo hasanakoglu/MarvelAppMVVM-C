@@ -5,7 +5,7 @@ class CharacterDetailsTableViewCell: UITableViewCell {
     private let characterImageView: UIImageView = UIImageView()
     private let button = UIButton()
     private var characterDescriptionURL: URL?
-    private let descriptionLabel: UILabel = UILabel()
+    let descriptionLabel: UILabel = UILabel()
     
     static let reuseIdentifier = "CharacterDetails"
     

@@ -2,13 +2,13 @@ import XCTest
 
 @testable import Marvel_App
 
-class CoordinatorTests: XCTestCase {
-    var subject: MainCoordinator!
+class MainViewCoordinatorTests: XCTestCase {
+    var subject: MainViewCoordinator!
     var navigationController: UINavigationController!
 
     override func setUp() {
         navigationController = UINavigationController()
-        subject = MainCoordinator(navigationController: navigationController)
+        subject = MainViewCoordinator(router: navigationController)
     }
 
     override func tearDown() {

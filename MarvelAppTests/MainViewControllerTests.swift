@@ -16,7 +16,7 @@ class MainViewControllerTests: XCTestCase {
         subject = nil
     }
     
-    func testViewAppears() {
+    func testViewDidLoad() {
         subject.viewDidLoad()
         XCTAssertNotNil(subject.tableView)
         let delegate = subject.tableView.delegate

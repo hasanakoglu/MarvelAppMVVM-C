@@ -3,18 +3,16 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var coordinator: MainCoordinator?
+    var mainTabBarController: MainTabBarController!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let navController = UINavigationController()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navController
+        mainTabBarController = MainTabBarController()
+        window?.rootViewController = mainTabBarController
         window?.makeKeyAndVisible()
-        
-        coordinator = MainCoordinator(navigationController: navController)
-        coordinator?.start()
-        
+                
         return true
     }
 }
