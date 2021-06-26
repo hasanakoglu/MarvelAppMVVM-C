@@ -39,6 +39,6 @@ class CharactersViewModelTests: XCTestCase {
 
 extension MarvelCharacter {
     static func characterStub() -> MarvelCharacter {
-        return MarvelCharacter(name: "name", description: "desc", thumbnail: Thumbnail(path: "test", thumbnailExtension: .jpg), urls: [MarvelURL(type: .detail, url: "")])
+        return MarvelCharacter(name: "name", description: "desc", thumbnail: Thumbnail(path: "test", thumbnailExtension: .jpg), urls: [MarvelURL(type: .detail, url: "www.google.com")])
     }
 }

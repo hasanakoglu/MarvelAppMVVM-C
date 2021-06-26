@@ -42,4 +42,12 @@ class MainViewControllerTests: XCTestCase {
         let cell: () = subject.tableView(subject.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         XCTAssertNotNil(cell)
     }
+    
+    func testImageUrlIsCorrect() {
+        let characters = MarvelCharacter.characterStub()
+        subject.viewModel.listOfCharacters.append(characters)
+        subject.viewDidLoad()
+        let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterImageCell
+        XCTAssertNotNil(cell?.img.loadImageFromUrl(urlString: characters.imageURL!.absoluteString))
+    }
 }

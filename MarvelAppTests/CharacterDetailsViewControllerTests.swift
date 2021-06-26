@@ -33,6 +33,11 @@ class CharacterDetailsViewControllerTests: XCTestCase {
         XCTAssertEqual(subject.title, mockCharacter.name)
     }
     
+    func testViewWillAppear() {
+        subject.viewWillAppear(true)
+        XCTAssertNotNil(subject.navigationController?.navigationBar.prefersLargeTitles)
+    }
+    
     func testDataSource() {
         XCTAssertTrue(subject.tableView.dataSource === subject)
     }

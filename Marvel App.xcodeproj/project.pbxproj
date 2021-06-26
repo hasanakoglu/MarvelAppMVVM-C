@@ -18,7 +18,7 @@
 		4D2C2BB523D6EB3200E88186 /* backup.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C2BB423D6EB3200E88186 /* backup.json */; };
 		5A2A542125C08C63001A682F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2A542025C08C63001A682F /* Coordinator.swift */; };
 		5A6D395625CB2D950041D169 /* CharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6D395525CB2D950041D169 /* CharacterRequest.swift */; };
-		5A84E931267F6A090034EA80 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E92B267F69BD0034EA80 /* CoordinatorTests.swift */; };
+		5A84E931267F6A090034EA80 /* MainViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E92B267F69BD0034EA80 /* MainViewCoordinatorTests.swift */; };
 		5A84E939267F6CED0034EA80 /* CharacterRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E938267F6CED0034EA80 /* CharacterRequestTests.swift */; };
 		5A84E940267F6D290034EA80 /* MockCharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E93F267F6D290034EA80 /* MockCharacterRequest.swift */; };
 		5A84E946267F6D6E0034EA80 /* FakeCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E945267F6D6E0034EA80 /* FakeCharactersViewModel.swift */; };
@@ -67,7 +67,7 @@
 		4D2C2BB423D6EB3200E88186 /* backup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = backup.json; sourceTree = "<group>"; };
 		5A2A542025C08C63001A682F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5A6D395525CB2D950041D169 /* CharacterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRequest.swift; sourceTree = "<group>"; };
-		5A84E92B267F69BD0034EA80 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		5A84E92B267F69BD0034EA80 /* MainViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinatorTests.swift; sourceTree = "<group>"; };
 		5A84E938267F6CED0034EA80 /* CharacterRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRequestTests.swift; sourceTree = "<group>"; };
 		5A84E93F267F6D290034EA80 /* MockCharacterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterRequest.swift; sourceTree = "<group>"; };
 		5A84E945267F6D6E0034EA80 /* FakeCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCharactersViewModel.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				5A9F0C0D2687AB9100CF3572 /* MainTabBarControllerTests.swift */,
 				5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */,
 				5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */,
-				5A84E92B267F69BD0034EA80 /* CoordinatorTests.swift */,
+				5A84E92B267F69BD0034EA80 /* MainViewCoordinatorTests.swift */,
 				5A84E938267F6CED0034EA80 /* CharacterRequestTests.swift */,
 				5A84E95A267F78160034EA80 /* AppDelegateTests.swift */,
 				5A84E93E267F6D0B0034EA80 /* Mocks */,
@@ -374,7 +374,7 @@
 				5A84E940267F6D290034EA80 /* MockCharacterRequest.swift in Sources */,
 				5A84E939267F6CED0034EA80 /* CharacterRequestTests.swift in Sources */,
 				5A84E961267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift in Sources */,
-				5A84E931267F6A090034EA80 /* CoordinatorTests.swift in Sources */,
+				5A84E931267F6A090034EA80 /* MainViewCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
