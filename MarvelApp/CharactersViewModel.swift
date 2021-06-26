@@ -1,11 +1,6 @@
 import Foundation
 import UIKit
 
-enum CharacterError: Error {
-    case noData
-    case jsonError
-}
-
 protocol CharactersViewModelProtocol {
     var listOfCharacters: [MarvelCharacter] { get set }
     var characterImages: [String: UIImage] { get set }

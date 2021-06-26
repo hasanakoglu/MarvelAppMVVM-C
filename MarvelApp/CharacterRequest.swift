@@ -1,5 +1,10 @@
 import Foundation
 
+enum CharacterError: Error {
+    case noData
+    case jsonError
+}
+
 protocol CharacterRequestProtocol {
     func fetchCharacters(completion: @escaping(Result<[MarvelCharacter], CharacterError>) -> Void)
 }

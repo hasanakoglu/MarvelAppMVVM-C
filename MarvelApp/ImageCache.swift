@@ -5,6 +5,11 @@ let imageCache = NSCache<AnyObject, AnyObject>()
 
 extension UIImageView {
     func loadImageFromUrl(urlString: String)  {
+        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+            self.image = imageFromCache
+            return
+        }
+        
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let jsonData = data {
