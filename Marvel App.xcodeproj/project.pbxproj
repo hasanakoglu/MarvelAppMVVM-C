@@ -28,9 +28,7 @@
 		5A84E957267F723C0034EA80 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A84E955267F723C0034EA80 /* test.png */; };
 		5A84E95B267F78160034EA80 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E95A267F78160034EA80 /* AppDelegateTests.swift */; };
 		5A84E961267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */; };
-		5A84E967267F81880034EA80 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E966267F81880034EA80 /* DateTests.swift */; };
 		5AA379FF25C87C7000EDBB5D /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */; };
-		5AEFBD00267E990900B2132F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFBCFF267E990900B2132F /* Date+Extensions.swift */; };
 		5AEFBD0D267EA2C100B2132F /* CharacterDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFBD0C267EA2C100B2132F /* CharacterDetailsTableViewCell.swift */; };
 		5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */; };
 		5AF07B9025C0743800708C8A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF07B8F25C0743800708C8A /* ImageCache.swift */; };
@@ -74,9 +72,7 @@
 		5A84E955267F723C0034EA80 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = "../../../../MARVEL APPs /MarvelMVVM-C-master/MarvelMVVM-CTests/TestData/test.png"; sourceTree = "<group>"; };
 		5A84E95A267F78160034EA80 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewControllerTests.swift; sourceTree = "<group>"; };
-		5A84E966267F81880034EA80 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		5AA379FE25C87C7000EDBB5D /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
-		5AEFBCFF267E990900B2132F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		5AEFBD0C267EA2C100B2132F /* CharacterDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		5AF07B8B25C072B700708C8A /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		5AF07B8F25C0743800708C8A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -149,7 +145,6 @@
 				5A84E92B267F69BD0034EA80 /* CoordinatorTests.swift */,
 				5A84E938267F6CED0034EA80 /* CharacterRequestTests.swift */,
 				5A84E95A267F78160034EA80 /* AppDelegateTests.swift */,
-				5A84E966267F81880034EA80 /* DateTests.swift */,
 				5A84E93E267F6D0B0034EA80 /* Mocks */,
 				4D2C289223D6DFB900E88186 /* Info.plist */,
 			);
@@ -198,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				5AF07B8F25C0743800708C8A /* ImageCache.swift */,
-				5AEFBCFF267E990900B2132F /* Date+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -326,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */,
-				5AEFBD00267E990900B2132F /* Date+Extensions.swift in Sources */,
 				4D2C28A123D6E14800E88186 /* MarvelURLs.swift in Sources */,
 				4D2C289C23D6E0FC00E88186 /* CharacterResponseModel.swift in Sources */,
 				4D2C287E23D6DFB800E88186 /* MainViewController.swift in Sources */,
@@ -350,7 +343,6 @@
 				4D2C289123D6DFB900E88186 /* MainViewControllerTests.swift in Sources */,
 				5A84E94E267F6DE20034EA80 /* MockTask.swift in Sources */,
 				5A84E95B267F78160034EA80 /* AppDelegateTests.swift in Sources */,
-				5A84E967267F81880034EA80 /* DateTests.swift in Sources */,
 				5A84E940267F6D290034EA80 /* MockCharacterRequest.swift in Sources */,
 				5A84E939267F6CED0034EA80 /* CharacterRequestTests.swift in Sources */,
 				5A84E961267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift in Sources */,

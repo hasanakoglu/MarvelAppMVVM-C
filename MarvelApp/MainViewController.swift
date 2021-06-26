@@ -76,6 +76,7 @@ extension MainViewController: UITableViewDataSource {
 //            self.viewModel.characterImages[characters.thumbnail.full] = image
 //            cell.img.image = image
 //        }
+        
         cell.img.loadImageFromUrl(urlString: characters.thumbnail.full)
         cell.update(title: characters.name, image: cell.img)
         return cell

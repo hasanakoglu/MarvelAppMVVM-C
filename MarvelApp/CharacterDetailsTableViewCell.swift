@@ -5,7 +5,7 @@ class CharacterDetailsTableViewCell: UITableViewCell {
     private let characterImageView: UIImageView = UIImageView()
     private let button = UIButton()
     private var characterDescriptionURL: URL?
-    let descriptionLabel: UILabel = UILabel()
+    private let descriptionLabel: UILabel = UILabel()
     
     static let reuseIdentifier = "CharacterDetails"
     
@@ -29,23 +29,6 @@ class CharacterDetailsTableViewCell: UITableViewCell {
         contentView.addSubview(characterImageView)
         contentView.addSubview(button)
         
-        characterImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        characterImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40.0).isActive = true
-        characterImageView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
-        characterImageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 30.0).isActive = true
-        nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
-        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0).isActive = true
-        descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10.0).isActive = true
-        descriptionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
-        descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0).isActive = true
-        button.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 50.0).isActive = true
-        button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
-        button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0).isActive = true
-        button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-
         nameLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         descriptionLabel.numberOfLines = 0
         characterImageView.contentMode = .scaleAspectFit
@@ -53,6 +36,26 @@ class CharacterDetailsTableViewCell: UITableViewCell {
         button.backgroundColor = .blue
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+        characterImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        characterImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40.0).isActive = true
+        characterImageView.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
+        characterImageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
+        
+        nameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 30.0).isActive = true
+        nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0).isActive = true
+        
+        descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10.0).isActive = true
+        descriptionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0).isActive = true
+        
+        button.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 50.0).isActive = true
+        button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
+        button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0).isActive = true
+        button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
     
     func update(with character: MarvelCharacter) {

@@ -22,23 +22,23 @@ final class CharacterImageCell: UITableViewCell {
     func setupViews() {
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 12
-        contentView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         contentView.addSubview(img)
         img.translatesAutoresizingMaskIntoConstraints = false
         img.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         img.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15).isActive = true
-        img.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        img.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        img.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        img.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        img.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
         
         contentView.addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.textColor = .black
         nameLabel.numberOfLines = 0
         
-        nameLabel.topAnchor.constraint(equalTo: img.bottomAnchor, constant: 10).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: img.trailingAnchor, constant: 5).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        nameLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        nameLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
     }
 }
