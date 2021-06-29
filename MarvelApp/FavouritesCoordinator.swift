@@ -18,7 +18,16 @@ final class FavouritesCoordinator: Coordinator {
         self.router = router
     }
     
-    func start() {}
+    func start() {
+        let favouritesViewController = FavouritesViewController()
+        favouritesViewController.coordinator = self
+        router.pushViewController(favouritesViewController, animated: true)
+    }
     
-    func didSelect(character: MarvelCharacter?) {}
+    func didSelect(character: MarvelCharacter?) {
+        guard let character = character else { return }
+        let viewModel = CharacterDetailsViewModel()
+        let detailsViewController = CharacterDetailsViewController(character: character, viewModel: viewModel)
+        router.pushViewController(detailsViewController, animated: true)
+    }
 }

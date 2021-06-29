@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FordInterview.xcodeproj">
+      location = "self:/Users/hasanakoglu/Desktop/GitHub Projects/MarvelApp/Marvel App.xcodeproj">
    </FileRef>
 </Workspace>

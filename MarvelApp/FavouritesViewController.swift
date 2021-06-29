@@ -1,14 +1,24 @@
+//
+//  FavouritesViewController.swift
+//  Marvel App
+//
+//  Created by Hasan Akoglu on 26/06/2021.
+//  Copyright © 2021 hakoglu. All rights reserved.
+//
+
 import UIKit
 
-class MainViewController: UIViewController {
+class FavouritesViewController: UIViewController {
+    var favourites = [MarvelCharacter]()
     let tableViewController: UITableViewController = UITableViewController(style: .plain)
-    var tableView: UITableView { return tableViewController.tableView }
-    var viewModel: CharactersViewModelProtocol
+    var tableView: UITableView {
+            return tableViewController.tableView
+        }
+
     var userDefaults = UserDefaults.standard
-    var coordinator: MainViewCoordinator?
+    var coordinator: FavouritesCoordinator?
     
-    public init(viewModel: CharactersViewModelProtocol) {
-        self.viewModel = viewModel
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -19,16 +29,16 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        self.title = "Marvel"
+        self.title = "Favourites"
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        
         setupTableView()
-        
-        viewModel.fetchCharacters {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        favourites = userDefaults.retrieve(object: [MarvelCharacter].self, fromKey: "Fav") ?? []
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
@@ -49,22 +59,26 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDelegate {
+extension FavouritesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let character = viewModel.listOfCharacters[indexPath.row]
+        let character = favourites[indexPath.row]
         coordinator?.didSelect(character: character)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
 }
 
-extension MainViewController: UITableViewDataSource {
+extension FavouritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.listOfCharacters.count
+        return favourites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CharacterImageCell.identifier, for: indexPath) as! CharacterImageCell
-        let character = viewModel.listOfCharacters[indexPath.row]
-        
+
+        let character = favourites[indexPath.row]
         cell.img.loadImageFromUrl(urlString: character.thumbnail.full)
         cell.update(title: character.name, image: cell.img)
         return cell

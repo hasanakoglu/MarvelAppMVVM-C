@@ -5,7 +5,10 @@ class CharacterDetailsTableViewCell: UITableViewCell {
     private let characterImageView: UIImageView = UIImageView()
     private let button = UIButton()
     private var characterDescriptionURL: URL?
+    
     let descriptionLabel: UILabel = UILabel()
+    let favouriteButton = UIButton()
+    var handler: ((UIButton) -> Void)?
     
     static let reuseIdentifier = "CharacterDetails"
     
@@ -20,11 +23,13 @@ class CharacterDetailsTableViewCell: UITableViewCell {
     
     private func setupViews() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        favouriteButton.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         characterImageView.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(nameLabel)
+        contentView.addSubview(favouriteButton)
         contentView.addSubview(descriptionLabel)
         contentView.addSubview(characterImageView)
         contentView.addSubview(button)
@@ -46,6 +51,14 @@ class CharacterDetailsTableViewCell: UITableViewCell {
         nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0).isActive = true
+        
+        favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        favouriteButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        favouriteButton.addTarget(self, action: #selector(favouritesButtonPressed(sender:)), for: .touchUpInside)
+        favouriteButton.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 30).isActive = true
+        favouriteButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
+        favouriteButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        favouriteButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
         
         descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10.0).isActive = true
         descriptionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
@@ -69,5 +82,10 @@ class CharacterDetailsTableViewCell: UITableViewCell {
     @objc func buttonTapped() {
         guard let url = characterDescriptionURL else { return }
         UIApplication.shared.open(url)
+    }
+    
+    @objc func favouritesButtonPressed(sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        self.handler?(sender)
     }
 }

@@ -27,7 +27,8 @@ final class MainViewCoordinator: Coordinator {
     
     func didSelect(character: MarvelCharacter?) {
         guard let character = character else { return }
-        let detailsVC = CharacterDetailsViewController(character: character)
+        let viewModel = CharacterDetailsViewModel()
+        let detailsVC = CharacterDetailsViewController(character: character, viewModel: viewModel)
         router.pushViewController(detailsVC, animated: true)
     }
 }

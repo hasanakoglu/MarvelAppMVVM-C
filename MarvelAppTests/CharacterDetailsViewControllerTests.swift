@@ -13,14 +13,16 @@ import XCTest
 class CharacterDetailsViewControllerTests: XCTestCase {
     var subject: CharacterDetailsViewController!
     var mockCharacter: MarvelCharacter!
+    var fakeViewModel: FakeCharacterDetailsViewModel!
     
     override func setUp() {
         let data = CharacterRequestTests.mockData
         let mockResponseModel = CharacterResponseModel.characterReponseModel(for: data)
         mockCharacter = mockResponseModel.data.characters[0]
+        fakeViewModel = FakeCharacterDetailsViewModel()
         
         let navigationController = UINavigationController()
-        subject = CharacterDetailsViewController(character: mockCharacter)
+        subject = CharacterDetailsViewController(character: mockCharacter, viewModel: fakeViewModel)
         navigationController.setViewControllers([subject], animated: false)
     }
 
@@ -56,7 +58,7 @@ class CharacterDetailsViewControllerTests: XCTestCase {
         let mockResponseModel = CharacterResponseModel.characterReponseModel(for: data)
         mockCharacter = mockResponseModel.data.characters[1]
         
-        subject = CharacterDetailsViewController(character: mockCharacter)
+        subject = CharacterDetailsViewController(character: mockCharacter, viewModel: fakeViewModel)
         let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterDetailsTableViewCell
         XCTAssertEqual(cell?.descriptionLabel.text, mockCharacter.description)
     }

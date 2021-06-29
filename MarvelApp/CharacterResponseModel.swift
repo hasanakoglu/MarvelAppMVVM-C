@@ -12,7 +12,7 @@ struct DataClass: Codable {
     }
 }
 
-struct MarvelCharacter: Codable {
+struct MarvelCharacter: Codable, Equatable {
     let name, description: String
     let thumbnail: Thumbnail
     let urls: [MarvelURL]
@@ -57,5 +57,11 @@ extension MarvelCharacter {
         let websiteURL = urls.filter { $0.type == .detail }
         guard let urlString = websiteURL.first?.url else { return nil }
         return URL(string: urlString)
+    }
+}
+
+extension MarvelCharacter {
+    static func == (lhs: MarvelCharacter, rhs: MarvelCharacter) -> Bool {
+        true
     }
 }

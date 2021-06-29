@@ -39,6 +39,6 @@ final class CharacterImageCell: UITableViewCell {
         nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: img.trailingAnchor, constant: 5).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        nameLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        nameLabel.widthAnchor.constraint(equalToConstant: 250).isActive = true
     }
 }
