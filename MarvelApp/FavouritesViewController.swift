@@ -9,16 +9,16 @@
 import UIKit
 
 class FavouritesViewController: UIViewController {
-    var favourites = [MarvelCharacter]()
     let tableViewController: UITableViewController = UITableViewController(style: .plain)
     var tableView: UITableView {
             return tableViewController.tableView
         }
 
-    var userDefaults = UserDefaults.standard
+    let viewModel: FavouritesViewModelProtocol
     var coordinator: FavouritesCoordinator?
     
-    public init() {
+    public init(viewModel: FavouritesViewModelProtocol = FavouritesViewModel()) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,7 +36,7 @@ class FavouritesViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        favourites = userDefaults.retrieve(object: [MarvelCharacter].self, fromKey: "Fav") ?? []
+        viewModel.viewWillAppear()
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -61,7 +61,7 @@ class FavouritesViewController: UIViewController {
 
 extension FavouritesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let character = favourites[indexPath.row]
+        let character = viewModel.favourites[indexPath.row]
         coordinator?.didSelect(character: character)
     }
     
@@ -72,13 +72,14 @@ extension FavouritesViewController: UITableViewDelegate {
 
 extension FavouritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favourites.count
+        return viewModel.favourites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CharacterImageCell.identifier, for: indexPath) as! CharacterImageCell
-
-        let character = favourites[indexPath.row]
+        cell.selectionStyle = .none
+        
+        let character = viewModel.favourites[indexPath.row]
         cell.img.loadImageFromUrl(urlString: character.thumbnail.full)
         cell.update(title: character.name, image: cell.img)
         return cell

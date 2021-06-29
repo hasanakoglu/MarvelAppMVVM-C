@@ -20,15 +20,15 @@ final class MainViewCoordinator: Coordinator {
     
     func start() {
         let viewModel = CharactersViewModel(request: CharacterRequest())
-        let vc = MainViewController(viewModel: viewModel)
-        vc.coordinator = self
-        router.pushViewController(vc, animated: true)
+        let mainViewController = MainViewController(viewModel: viewModel)
+        mainViewController.coordinator = self
+        router.pushViewController(mainViewController, animated: true)
     }
     
     func didSelect(character: MarvelCharacter?) {
         guard let character = character else { return }
         let viewModel = CharacterDetailsViewModel()
-        let detailsVC = CharacterDetailsViewController(character: character, viewModel: viewModel)
-        router.pushViewController(detailsVC, animated: true)
+        let detailsViewController = CharacterDetailsViewController(character: character, viewModel: viewModel)
+        router.pushViewController(detailsViewController, animated: true)
     }
 }

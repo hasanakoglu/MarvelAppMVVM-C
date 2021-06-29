@@ -12,9 +12,7 @@ import Foundation
 
 class FakeCharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
     var favourites: [MarvelCharacter] = []
-    
-    var characterNames: [String] = []
-    
+        
     func viewWillAppear() {
     }
     
@@ -24,6 +22,7 @@ class FakeCharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
     func removeFromFavourites(character: MarvelCharacter) {
     }
     
-    func saveDefaults() {
+    func buttonSelectedState(character: MarvelCharacter) -> Bool {
+        true
     }
 }

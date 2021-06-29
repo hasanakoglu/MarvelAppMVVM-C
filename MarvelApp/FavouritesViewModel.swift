@@ -1,22 +1,21 @@
 //
-//  CharacterDetailsViewModel.swift
+//  FavouritesViewModel.swift
 //  Marvel App
 //
-//  Created by Hasan Akoglu on 28/06/2021.
+//  Created by Hasan Akoglu on 29/06/2021.
 //  Copyright © 2021 hakoglu. All rights reserved.
 //
 
 import Foundation
 
-protocol CharacterDetailsViewModelProtocol {
+protocol FavouritesViewModelProtocol {
     var favourites: [MarvelCharacter] { get set }
     func viewWillAppear()
-    func buttonSelectedState(character: MarvelCharacter) -> Bool
     func addToFavourites(character: MarvelCharacter)
     func removeFromFavourites(character: MarvelCharacter)
 }
 
-class CharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
+class FavouritesViewModel: FavouritesViewModelProtocol {
     let favouritesManager: FavouritesManagerProtocol
     let userDefaults = UserDefaults.standard
     var favourites = [MarvelCharacter]()
@@ -27,14 +26,6 @@ class CharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
     
     func viewWillAppear() {
         favourites = favouritesManager.retrieveFavourites()
-    }
-    
-    func buttonSelectedState(character: MarvelCharacter) -> Bool {
-        if favourites.contains(where: { $0.name == character.name }) {
-            return true
-        } else {
-            return false
-        }
     }
     
     func addToFavourites(character: MarvelCharacter) {

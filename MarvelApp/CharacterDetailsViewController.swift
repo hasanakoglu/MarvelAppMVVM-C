@@ -3,9 +3,8 @@ import UIKit
 class CharacterDetailsViewController: UITableViewController {
     private let character: MarvelCharacter
     private var viewModel: CharacterDetailsViewModelProtocol
-    private let userDefaults = UserDefaults.standard
     
-    init(character: MarvelCharacter, viewModel: CharacterDetailsViewModelProtocol) {
+    init(character: MarvelCharacter, viewModel: CharacterDetailsViewModelProtocol = CharacterDetailsViewModel()) {
         self.character = character
         self.viewModel = viewModel
         super.init(style: .plain)
@@ -21,6 +20,13 @@ class CharacterDetailsViewController: UITableViewController {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        viewModel.viewWillAppear()
+    }
+    
     func setupTableView() {
         tableView.dataSource = self
         tableView.register(CharacterDetailsTableViewCell.self, forCellReuseIdentifier: CharacterDetailsTableViewCell.reuseIdentifier)
@@ -28,10 +34,6 @@ class CharacterDetailsViewController: UITableViewController {
         tableView.estimatedRowHeight = 44.0
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        viewModel.viewWillAppear()
     }
 }
 
@@ -43,9 +45,7 @@ extension CharacterDetailsViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailsTableViewCell.reuseIdentifier, for: indexPath) as? CharacterDetailsTableViewCell else { return UITableViewCell() }
         
-        if viewModel.characterNames.contains(character.name) {
-            cell.favouriteButton.isSelected = true
-        }
+        cell.favouriteButton.isSelected = viewModel.buttonSelectedState(character: character)
         cell.update(with: character)
         cell.handler = { sender in
             if sender.isSelected {
@@ -53,7 +53,6 @@ extension CharacterDetailsViewController {
             } else {
                 self.viewModel.removeFromFavourites(character: self.character)
             }
-            self.viewModel.saveDefaults()
         }
         return cell
     }

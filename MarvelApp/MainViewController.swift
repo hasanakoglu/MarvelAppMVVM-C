@@ -63,6 +63,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CharacterImageCell.identifier, for: indexPath) as! CharacterImageCell
+        cell.selectionStyle = .none
         let character = viewModel.listOfCharacters[indexPath.row]
         
         cell.img.loadImageFromUrl(urlString: character.thumbnail.full)

@@ -19,7 +19,8 @@ final class FavouritesCoordinator: Coordinator {
     }
     
     func start() {
-        let favouritesViewController = FavouritesViewController()
+        let viewModel = FavouritesViewModel()
+        let favouritesViewController = FavouritesViewController(viewModel: viewModel)
         favouritesViewController.coordinator = self
         router.pushViewController(favouritesViewController, animated: true)
     }
