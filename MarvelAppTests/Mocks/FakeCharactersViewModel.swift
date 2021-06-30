@@ -21,14 +21,4 @@ class FakeCharactersViewModel: CharactersViewModelProtocol {
         fetchCharactersCalled = true
         return
     }
-    
-    var getImageCalled = true
-    var testImage = UIImage(named: "test")
-    func getImage(index: Int, completion: @escaping (UIImage?) -> Void) {
-        if getImageCalled == true {
-            completion(testImage)
-        } else {
-            completion(nil)
-        }
-    }
 }

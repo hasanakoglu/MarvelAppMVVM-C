@@ -10,7 +10,7 @@ class CharactersViewModelTests: XCTestCase {
     override func setUpWithError() throws {
         fakeCharacterViewModel = FakeCharactersViewModel()
         mockCharacterRequest = MockCharacterRequest()
-        mockURLSession = MockURLSession(data: fakeCharacterViewModel.testImage?.pngData(), urlResponse: nil, error: nil)
+        mockURLSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
         subject = CharactersViewModel(urlSession: mockURLSession, request: mockCharacterRequest)
     }
 
@@ -23,17 +23,6 @@ class CharactersViewModelTests: XCTestCase {
         subject.fetchCharacters {
         }
         XCTAssertEqual(subject.listOfCharacters.count, 1)
-    }
-    
-    func testGetImage() {
-        subject.listOfCharacters = fakeCharacterViewModel.listOfCharacters
-        let promise = expectation(description: "get image success")
-        subject.getImage(index: 0) { _ in
-            promise.fulfill()
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
-        XCTAssertEqual(subject.characterImages.count, 1)
     }
 }
 
