@@ -35,7 +35,7 @@
 		5A84E961267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */; };
 		5A9C7B582687CBA00071C186 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C7B572687CBA00071C186 /* FavouritesViewController.swift */; };
 		5A9D0732268DF6C700562943 /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D0731268DF6C700562943 /* UserDefaultsProtocol.swift */; };
-		5A9D0734268E069D00562943 /* MockDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D0733268E069D00562943 /* MockDefaults.swift */; };
+		5A9D0825268E228200562943 /* MockDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D0733268E069D00562943 /* MockDefaults.swift */; };
 		5A9F0BF52687A7C700CF3572 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BF42687A7C700CF3572 /* MainTabBarController.swift */; };
 		5A9F0BF92687A89400CF3572 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BF82687A89400CF3572 /* MainViewCoordinator.swift */; };
 		5A9F0BFF2687A8F300CF3572 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BFE2687A8F300CF3572 /* CoordinatorFactory.swift */; };
@@ -389,7 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9C7B582687CBA00071C186 /* FavouritesViewController.swift in Sources */,
-				5A9D0734268E069D00562943 /* MockDefaults.swift in Sources */,
 				5AC1FF57268B66A00054D08A /* FavouritesManager.swift in Sources */,
 				5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */,
 				4D2C28A123D6E14800E88186 /* MarvelURLs.swift in Sources */,
@@ -423,6 +422,7 @@
 				5A84E946267F6D6E0034EA80 /* FakeCharactersViewModel.swift in Sources */,
 				5A3AEE94268CDF4E002373EB /* FakeFavouritesViewModel.swift in Sources */,
 				4D2C289123D6DFB900E88186 /* MainViewControllerTests.swift in Sources */,
+				5A9D0825268E228200562943 /* MockDefaults.swift in Sources */,
 				5A9F0C112687AB9600CF3572 /* MainTabBarControllerTests.swift in Sources */,
 				5A3AEE96268CE019002373EB /* FavouritesViewControllerTests.swift in Sources */,
 				5A84E94E267F6DE20034EA80 /* MockTask.swift in Sources */,

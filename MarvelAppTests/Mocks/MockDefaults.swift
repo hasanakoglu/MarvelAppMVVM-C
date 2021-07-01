@@ -8,6 +8,8 @@
 
 import Foundation
 
+@testable import Marvel_App
+
 class MockDefaults: UserDefaultsProtocol {
     var setValue: Any?
     var key = "test"
