@@ -11,14 +11,11 @@ import Foundation
 protocol FavouritesViewModelProtocol {
     var favourites: [MarvelCharacter] { get set }
     func viewWillAppear()
-    func addToFavourites(character: MarvelCharacter)
-    func removeFromFavourites(character: MarvelCharacter)
 }
 
 class FavouritesViewModel: FavouritesViewModelProtocol {
-    let favouritesManager: FavouritesManagerProtocol
-    let userDefaults = UserDefaults.standard
     var favourites = [MarvelCharacter]()
+    var favouritesManager: FavouritesManagerProtocol
     
     init(favouritesManager: FavouritesManagerProtocol = FavouritesManager()) {
         self.favouritesManager = favouritesManager
@@ -26,14 +23,5 @@ class FavouritesViewModel: FavouritesViewModelProtocol {
     
     func viewWillAppear() {
         favourites = favouritesManager.retrieveFavourites()
-    }
-    
-    func addToFavourites(character: MarvelCharacter) {
-        favourites.append(character)
-        favouritesManager.addToFavourites(for: favourites)
-    }
-    
-    func removeFromFavourites(character: MarvelCharacter) {
-        favouritesManager.removeFromFavourites(character: character)
     }
 }

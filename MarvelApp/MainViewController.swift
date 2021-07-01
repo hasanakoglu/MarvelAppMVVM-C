@@ -4,7 +4,6 @@ class MainViewController: UIViewController {
     let tableViewController: UITableViewController = UITableViewController(style: .plain)
     var tableView: UITableView { return tableViewController.tableView }
     var viewModel: CharactersViewModelProtocol
-    var userDefaults = UserDefaults.standard
     var coordinator: MainViewCoordinator?
     
     public init(viewModel: CharactersViewModelProtocol) {

@@ -12,48 +12,51 @@ import XCTest
 @testable import Marvel_App
 
 class FavouritesManagerTests: XCTestCase {
-    private var userDefaults: UserDefaults!
+    private var mockDefaults: MockDefaults!
     private var subject: FavouritesManager!
-    private let key = "Fav"
     
     override func setUp() {
         super.setUp()
-        userDefaults = UserDefaults.standard
-        userDefaults.removePersistentDomain(forName: #file)
-        subject = FavouritesManager()
+        mockDefaults = MockDefaults()
+        subject = FavouritesManager(userDefaults: mockDefaults)
     }
     
     override func tearDown() {
-        userDefaults = nil
+        mockDefaults = nil
         subject = nil
         super.tearDown()
     }
     
-    func testAddToFavourites() {
+    func testAddToFavourites() throws {
         let character = MarvelCharacter.characterStub()
         subject.addToFavourites(for: [character])
-        
-        let favourites = userDefaults.object(forKey: key)
-        XCTAssertNotNil(favourites)
+        let favourites = try JSONDecoder().decode([MarvelCharacter].self, from: mockDefaults.setValue as! Data)
+        XCTAssertEqual(favourites, [character])
     }
     
     func testRemoveFromFavourites() throws {
-        let character = MarvelCharacter.characterStub()
-        let encodedCharacters = try JSONEncoder().encode([character])
-        userDefaults.setValue(encodedCharacters, forKey: key)
+        let characters = [MarvelCharacter.characterStub()]
+        let encodedCharacters = try JSONEncoder().encode(characters)
+        mockDefaults.value = encodedCharacters
         
-        let favourites = userDefaults.object(forKey: key)
+        let character = characters[0]
         subject.removeFromFavourites(character: character)
-        XCTAssertNil(favourites)
+        let favourites = try JSONDecoder().decode([MarvelCharacter].self, from: mockDefaults.setValue as! Data)
+        XCTAssertFalse(favourites.contains(character))
     }
     
     func testRetrieveFavourites() throws {
-        let character = MarvelCharacter.characterStub()
-        let encodedCharacter = try JSONEncoder().encode(character)
-        userDefaults.setValue(encodedCharacter, forKey: key)
+        let characters = [MarvelCharacter.characterStub()]
+        let encodedCharacters = try JSONEncoder().encode(characters)
+        mockDefaults.value = encodedCharacters
         
-        let favourites = subject.retrieveFavourites()
-        XCTAssertNotNil(favourites)
-        XCTAssertEqual(favourites.count, 1)
+        let favourites = try JSONDecoder().decode([MarvelCharacter].self, from: mockDefaults.value as! Data)
+        let savedFavourites = subject.retrieveFavourites()
+        XCTAssertEqual(savedFavourites, favourites)
+    }
+    
+    func testRetrieveFavouritesReturnsEmpty() {
+        let savedFavourites = subject.retrieveFavourites()
+        XCTAssertEqual(savedFavourites, [])
     }
 }

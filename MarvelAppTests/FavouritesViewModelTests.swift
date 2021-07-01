@@ -30,14 +30,4 @@ class FavouritesViewModelTests: XCTestCase {
         subject.viewWillAppear()
         XCTAssertTrue(fakeFavouritesManager.retrieveFavouritesCalled)
     }
-    
-    func testAddToFavourites() {
-        subject.addToFavourites(character: character)
-        XCTAssertTrue(fakeFavouritesManager.addToFavouritesCalled)
-    }
-    
-    func testRemoveFromFavourites() {
-        subject.removeFromFavourites(character: character)
-        XCTAssertTrue(fakeFavouritesManager.removeFromFavouritesCalled)
-    }
 }

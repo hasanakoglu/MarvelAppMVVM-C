@@ -34,6 +34,8 @@
 		5A84E95B267F78160034EA80 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E95A267F78160034EA80 /* AppDelegateTests.swift */; };
 		5A84E961267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */; };
 		5A9C7B582687CBA00071C186 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C7B572687CBA00071C186 /* FavouritesViewController.swift */; };
+		5A9D0732268DF6C700562943 /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D0731268DF6C700562943 /* UserDefaultsProtocol.swift */; };
+		5A9D0734268E069D00562943 /* MockDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D0733268E069D00562943 /* MockDefaults.swift */; };
 		5A9F0BF52687A7C700CF3572 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BF42687A7C700CF3572 /* MainTabBarController.swift */; };
 		5A9F0BF92687A89400CF3572 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BF82687A89400CF3572 /* MainViewCoordinator.swift */; };
 		5A9F0BFF2687A8F300CF3572 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F0BFE2687A8F300CF3572 /* CoordinatorFactory.swift */; };
@@ -94,6 +96,8 @@
 		5A84E95A267F78160034EA80 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		5A84E960267F7FAC0034EA80 /* CharacterDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		5A9C7B572687CBA00071C186 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		5A9D0731268DF6C700562943 /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
+		5A9D0733268E069D00562943 /* MockDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDefaults.swift; sourceTree = "<group>"; };
 		5A9F0BF42687A7C700CF3572 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5A9F0BF82687A89400CF3572 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		5A9F0BFE2687A8F300CF3572 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				5A84E949267F6DB40034EA80 /* MockURLSession.swift */,
 				5A84E94D267F6DE20034EA80 /* MockTask.swift */,
 				5A3D1C17268D3DB800146145 /* FakeFavouritesManager.swift */,
+				5A9D0733268E069D00562943 /* MockDefaults.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF07B8F25C0743800708C8A /* ImageCache.swift */,
+				5A9D0731268DF6C700562943 /* UserDefaultsProtocol.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9C7B582687CBA00071C186 /* FavouritesViewController.swift in Sources */,
+				5A9D0734268E069D00562943 /* MockDefaults.swift in Sources */,
 				5AC1FF57268B66A00054D08A /* FavouritesManager.swift in Sources */,
 				5AF07B8C25C072B700708C8A /* CharactersViewModel.swift in Sources */,
 				4D2C28A123D6E14800E88186 /* MarvelURLs.swift in Sources */,
@@ -397,6 +404,7 @@
 				5AF07B9725C074A500708C8A /* CharacterImageCell.swift in Sources */,
 				5AC1FF53268B5B3C0054D08A /* FavouritesViewModel.swift in Sources */,
 				5A9F0BFF2687A8F300CF3572 /* CoordinatorFactory.swift in Sources */,
+				5A9D0732268DF6C700562943 /* UserDefaultsProtocol.swift in Sources */,
 				5AEFBD0D267EA2C100B2132F /* CharacterDetailsTableViewCell.swift in Sources */,
 				5A3D1C18268D3DB800146145 /* FakeFavouritesManager.swift in Sources */,
 				5AF07B9025C0743800708C8A /* ImageCache.swift in Sources */,

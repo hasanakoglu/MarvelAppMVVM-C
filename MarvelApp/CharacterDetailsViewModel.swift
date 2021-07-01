@@ -18,7 +18,6 @@ protocol CharacterDetailsViewModelProtocol {
 
 class CharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
     let favouritesManager: FavouritesManagerProtocol
-    let userDefaults = UserDefaults.standard
     var favourites = [MarvelCharacter]()
     
     init(favouritesManager: FavouritesManagerProtocol = FavouritesManager()) {
@@ -38,7 +37,9 @@ class CharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
     }
     
     func addToFavourites(character: MarvelCharacter) {
-        favourites.append(character)
+        if !favourites.contains(where: { $0.name == character.name }) {
+            favourites.append(character)
+        }
         favouritesManager.addToFavourites(for: favourites)
     }
     
