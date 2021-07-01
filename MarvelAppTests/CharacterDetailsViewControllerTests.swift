@@ -67,6 +67,29 @@ class CharacterDetailsViewControllerTests: XCTestCase {
         let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterDetailsTableViewCell
         XCTAssertEqual(cell?.descriptionLabel.text, "No Description")
     }
+    
+    func testTableViewCellButtonTappedOpensCorrectURL() {
+        let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterDetailsTableViewCell
+        let data = CharacterRequestTests.mockData
+        let mockResponseModel = CharacterResponseModel.characterReponseModel(for: data)
+        mockCharacter = mockResponseModel.data.characters[1]
+        cell?.buttonTapped()
+        XCTAssertEqual(mockCharacter.websiteURL?.absoluteString, "http://marvel.com/comics/characters/1009610/spider-man?utm_campaign=apiRef&utm_source=ff3d4847092294acc724123682af904b")
+    }
+    
+    func testTableViewCellFavouritesButtonTapped() {
+        let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterDetailsTableViewCell
+        cell?.favouriteButton.sendActions(for: .touchUpInside)
+        XCTAssertNotNil(cell?.handler)
+    }
+    
+    func testTableViewCellFavouritesButtonTapped_thenAddToFavouritesCalled() {
+        let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterDetailsTableViewCell
+        cell?.favouriteButton.sendActions(for: .touchUpInside)
+        cell?.favouriteButton.sendActions(for: .touchUpInside)
+        XCTAssertNotNil(cell?.handler)
+        XCTAssertTrue(fakeViewModel.addToFavouritesCalled)
+    }
 }
 
 extension CharacterResponseModel {

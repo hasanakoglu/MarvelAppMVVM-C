@@ -1,8 +1,8 @@
 //
-//  FakeCharacterDetailsViewModel.swift
-//  Marvel App
+//  FakeFavouritesViewModel.swift
+//  Marvel AppTests
 //
-//  Created by Hasan Akoglu on 29/06/2021.
+//  Created by Hasan Akoglu on 30/06/2021.
 //  Copyright © 2021 hakoglu. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 
 @testable import Marvel_App
 
-class FakeCharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
+class FakeFavouritesViewModel: FavouritesViewModelProtocol {
     var favourites: [MarvelCharacter] = []
         
     func viewWillAppear() {
@@ -22,9 +22,5 @@ class FakeCharacterDetailsViewModel: CharacterDetailsViewModelProtocol {
     }
     
     func removeFromFavourites(character: MarvelCharacter) {
-    }
-    
-    func buttonSelectedState(character: MarvelCharacter) -> Bool {
-        true
     }
 }

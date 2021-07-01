@@ -3,12 +3,10 @@ import XCTest
 
 class CharactersViewModelTests: XCTestCase {
     var subject: CharactersViewModel!
-    var fakeCharacterViewModel: FakeCharactersViewModel!
     var mockURLSession: MockURLSession!
     var mockCharacterRequest: MockCharacterRequest!
 
     override func setUpWithError() throws {
-        fakeCharacterViewModel = FakeCharactersViewModel()
         mockCharacterRequest = MockCharacterRequest()
         mockURLSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
         subject = CharactersViewModel(urlSession: mockURLSession, request: mockCharacterRequest)

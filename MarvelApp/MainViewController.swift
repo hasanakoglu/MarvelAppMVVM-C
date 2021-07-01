@@ -26,9 +26,7 @@ class MainViewController: UIViewController {
         setupTableView()
         
         viewModel.fetchCharacters {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.tableView.reloadData()
         }
     }
     

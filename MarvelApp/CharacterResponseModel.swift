@@ -18,7 +18,7 @@ struct MarvelCharacter: Codable, Equatable {
     let urls: [MarvelURL]
 }
 
-struct Thumbnail: Codable {
+struct Thumbnail: Codable, Equatable {
     let path: String
     let thumbnailExtension: Extension
     
@@ -36,7 +36,7 @@ enum Extension: String, Codable {
     case jpg = "jpg"
 }
 
-struct MarvelURL: Codable {
+struct MarvelURL: Codable, Equatable {
     let type: URLType
     let url: String
 }
@@ -57,11 +57,5 @@ extension MarvelCharacter {
         let websiteURL = urls.filter { $0.type == .detail }
         guard let urlString = websiteURL.first?.url else { return nil }
         return URL(string: urlString)
-    }
-}
-
-extension MarvelCharacter {
-    static func == (lhs: MarvelCharacter, rhs: MarvelCharacter) -> Bool {
-        true
     }
 }

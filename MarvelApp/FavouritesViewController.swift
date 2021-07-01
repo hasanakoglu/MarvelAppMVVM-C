@@ -14,7 +14,7 @@ class FavouritesViewController: UIViewController {
             return tableViewController.tableView
         }
 
-    let viewModel: FavouritesViewModelProtocol
+    var viewModel: FavouritesViewModelProtocol
     var coordinator: FavouritesCoordinator?
     
     public init(viewModel: FavouritesViewModelProtocol = FavouritesViewModel()) {
@@ -37,9 +37,7 @@ class FavouritesViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         viewModel.viewWillAppear()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
     }
     
     func setupTableView() {
@@ -63,10 +61,6 @@ extension FavouritesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let character = viewModel.favourites[indexPath.row]
         coordinator?.didSelect(character: character)
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
     }
 }
 

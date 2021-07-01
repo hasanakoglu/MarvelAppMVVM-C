@@ -52,7 +52,8 @@ class CharacterRequestTests: XCTestCase {
         wait(for: [expectation], timeout: 0.1)
 
         XCTAssertNil(result?.value)
-        XCTAssertNotNil(CharacterError.jsonError)
+        XCTAssertNotNil(result?.error)
+        XCTAssertNotNil(CharacterError.noData)
     }
 }
 

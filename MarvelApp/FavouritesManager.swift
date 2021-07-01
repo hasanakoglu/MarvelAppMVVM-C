@@ -14,7 +14,6 @@ protocol FavouritesManagerProtocol {
     func retrieveFavourites() -> [MarvelCharacter]
 }
 
-
 class FavouritesManager: FavouritesManagerProtocol {
     private let userDefaults = UserDefaults.standard
     private let key = "Fav"

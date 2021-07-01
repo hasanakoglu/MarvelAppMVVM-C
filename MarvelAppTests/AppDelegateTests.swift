@@ -28,7 +28,7 @@ class AppDelegateTests: XCTestCase {
     
     func testAppDelegateLaunch_SetsUpRootViewControllerCorrectly() {
         guard let rootViewController = subject.window?.rootViewController else {
-            XCTFail("No rootViewController")
+            XCTFail("rootViewController is nil")
             return
         }
         

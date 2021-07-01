@@ -1,13 +1,22 @@
+//
+//  FavouritesViewControllerTests.swift
+//  Marvel AppTests
+//
+//  Created by Hasan Akoglu on 30/06/2021.
+//  Copyright © 2021 hakoglu. All rights reserved.
+//
+
 import XCTest
+
 @testable import Marvel_App
 
-class MainViewControllerTests: XCTestCase {
-    var subject: MainViewController!
-    var fakeViewModel: FakeCharactersViewModel!
+class FavouritesViewControllerTests: XCTestCase {
+    var subject: FavouritesViewController!
+    var fakeViewModel: FakeFavouritesViewModel!
 
     override func setUp() {
-        fakeViewModel = FakeCharactersViewModel()
-        subject = MainViewController(viewModel: fakeViewModel)
+        fakeViewModel = FakeFavouritesViewModel()
+        subject = FavouritesViewController(viewModel: fakeViewModel)
     }
 
     override func tearDown() {
@@ -24,12 +33,18 @@ class MainViewControllerTests: XCTestCase {
 
         XCTAssertTrue(delegate === subject)
         XCTAssertTrue(dataSource === subject)
-        XCTAssertTrue(fakeViewModel.fetchCharactersCalled)
+    }
+    
+    func testTableViewNumberOfRowsInSection() {
+        let characters = MarvelCharacter.characterStub()
+        subject.viewModel.favourites.append(characters)
+        subject.viewWillAppear(true)
+        XCTAssertEqual(subject.tableView.numberOfSections, 1)
     }
     
     func testTableViewCellForRowAt() {
         let characters = MarvelCharacter.characterStub()
-        subject.viewModel.listOfCharacters.append(characters)
+        subject.viewModel.favourites.append(characters)
         subject.viewDidLoad()
         let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterImageCell
         XCTAssertNotNil(cell)
@@ -38,7 +53,7 @@ class MainViewControllerTests: XCTestCase {
     
     func testTableViewDidSelectRowAt() {
         let characters = MarvelCharacter.characterStub()
-        subject.viewModel.listOfCharacters.append(characters)
+        subject.viewModel.favourites.append(characters)
         subject.viewDidLoad()
         let cell: () = subject.tableView(subject.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         XCTAssertNotNil(cell)
@@ -46,7 +61,7 @@ class MainViewControllerTests: XCTestCase {
     
     func testImageUrlIsCorrect() {
         let characters = MarvelCharacter.characterStub()
-        subject.viewModel.listOfCharacters.append(characters)
+        subject.viewModel.favourites.append(characters)
         subject.viewDidLoad()
         let cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterImageCell
         XCTAssertNotNil(cell?.img.loadImageFromUrl(urlString: characters.imageURL!.absoluteString))
